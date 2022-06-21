@@ -1,24 +1,136 @@
 {
-  "name": "event-platform",
-  "private": true,
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "@vitejs/plugin-react": "^1.3.0",
-    "autoprefixer": "^10.4.7",
-    "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.3",
-    "typescript": "^4.6.3",
-    "vite": "^2.9.9"
-  }
+	"name": "event-platform",
+	"description": "Application developed in Ignite Lab Week from RocketSeat.",
+	"private": true,
+	"version": "0.0.0",
+	"author": "Renan Hilário <rvahilario@gmail> (@rvahilario)",
+	"license": "MIT",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"cz": "cz"
+	},
+	"dependencies": {
+		"react": "^18.0.0",
+		"react-dom": "^18.0.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.0.0",
+		"@types/react-dom": "^18.0.0",
+		"@vitejs/plugin-react": "^1.3.0",
+		"autoprefixer": "^10.4.7",
+		"commitizen": "^4.2.4",
+		"cz-emoji": "1.3.1",
+		"postcss": "^8.4.14",
+		"tailwindcss": "^3.1.3",
+		"typescript": "^4.6.3",
+		"vite": "^2.9.9"
+	},
+	"config": {
+		"commitizen": {
+			"path": "cz-emoji"
+		},
+		"cz-emoji": {
+			"conventional": true,
+			"skipQuestions": [
+				"scope",
+				"body",
+				"issues",
+				"breaking"
+			],
+			"types": [
+				{
+					"emoji": "🌟",
+					"code": ":star2:",
+					"description": "Introducing new features.",
+					"name": "feat"
+				},
+				{
+					"emoji": "🐞",
+					"code": ":beetle:",
+					"description": "Fixing a bug.",
+					"name": "fix"
+				},
+				{
+					"emoji": "🎨",
+					"code": ":art:",
+					"description": "Improving structure / format of the code.",
+					"name": "style"
+				},
+				{
+					"emoji": "♻️",
+					"code": ":recycle:",
+					"description": "Refactoring code.",
+					"name": "refact"
+				},
+				{
+					"emoji": "✅",
+					"code": ":white_check_mark:",
+					"description": "Adding tests.",
+					"name": "test"
+				},
+				{
+					"emoji": "🔧",
+					"code": ":wrench:",
+					"description": "Changing configuration files.",
+					"name": "config"
+				},
+				{
+					"emoji": "🔥",
+					"code": ":fire:",
+					"description": "Removing code or files.",
+					"name": "del"
+				},
+				{
+					"emoji": "➕",
+					"code": ":heavy_plus_sign:",
+					"description": "Adding a dependency.",
+					"name": "dep_add"
+				},
+				{
+					"emoji": "➖",
+					"code": ":heavy_minus_sign:",
+					"description": "Removing a dependency.",
+					"name": "dep_rm"
+				},
+				{
+					"emoji": "🙈",
+					"code": ":see_no_evil:",
+					"description": "Adding or updating a .gitignore file.",
+					"name": "gitingore"
+				},
+				{
+					"emoji": "📝",
+					"code": ":pencil:",
+					"description": "Writing docs.",
+					"name": "docs"
+				},
+				{
+					"emoji": "⚡️",
+					"code": ":zap:",
+					"description": "Improving performance.",
+					"name": "perf"
+				},
+				{
+					"emoji": "🎉",
+					"code": ":tada:",
+					"description": "Initial commit.",
+					"name": "start"
+				},
+				{
+					"emoji": "🚚",
+					"code": ":truck:",
+					"description": "Moving or renaming files.",
+					"name": "moving"
+				},
+				{
+					"emoji": "🍱",
+					"code": ":bento:",
+					"description": "Adding or updating assets.",
+					"name": "assets"
+				}
+			]
+		}
+	}
 }
