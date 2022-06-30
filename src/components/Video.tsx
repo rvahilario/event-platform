@@ -1,3 +1,10 @@
+import {
+	CaretRight,
+	DiscordLogo,
+	FileArrowDown,
+	Lightning,
+} from 'phosphor-react';
+
 export const Video = () => {
 	return (
 		<div className="flex-1">
@@ -57,6 +64,44 @@ export const Video = () => {
 						</a>
 					</div>
 				</div>
+
+				<div className="gap-8 mt-20 grid grid-cols-2">
+					<a
+						href=""
+						className="flex items-stretch bg-gray-700 rounded-lg overflow-hidden gap-6 hover:bg-gray-600 transition-colors"
+					>
+						<div className="flex items-center bg-green-700 h-full p-6">
+							<FileArrowDown size={40} />
+						</div>
+						<div className="py-6 leading-relaxed">
+							<strong className="text-2xl">Complementary material</strong>
+							<p className="text-sm text-gray-200 mt-2">
+								Access complementary material to accelerate your development
+							</p>
+						</div>
+						<div className="flex items-center h-full p-6 ">
+							<CaretRight size={24} />
+						</div>
+					</a>
+
+					<a
+						href=""
+						className="flex items-stretch bg-gray-700 rounded-lg overflow-hidden gap-6 hover:bg-gray-600 transition-colors"
+					>
+						<div className="flex items-center bg-green-700 h-full p-6">
+							<FileArrowDown size={40} />
+						</div>
+						<div className="py-6 leading-relaxed">
+							<strong className="text-2xl">Exclusive Wallpapers</strong>
+							<p className="text-sm text-gray-200 mt-2">
+								Download exclusive Ignite Lab wallpapers and customize your
+								machine
+							</p>
+						</div>
+						<div className="flex items-center h-full p-6 ">
+							<CaretRight size={24} />
+						</div>
+					</a>
 				</div>
 			</div>
 		</div>
