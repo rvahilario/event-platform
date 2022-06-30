@@ -38,6 +38,25 @@ export const Video = () => {
 							</div>
 						</div>
 					</div>
+
+					<div className="flex flex-col gap-4">
+						<a
+							href=""
+							className="flex p-4 text-sm bg-green-500 items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors"
+						>
+							<DiscordLogo size={24} />
+							Discord Community
+						</a>
+
+						<a
+							href=""
+							className="flex p-4 text-sm text-blue-500 border border-blue-500 items-center rounded font-bold uppercase gap-2 justify-center hover:bg-blue-500 hover:text-gray-900 transition-colors"
+						>
+							<Lightning size={24} />
+							Access the Challenge
+						</a>
+					</div>
+				</div>
 				</div>
 			</div>
 		</div>
