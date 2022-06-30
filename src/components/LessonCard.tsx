@@ -1,5 +1,6 @@
 import { CheckCircle, Lock } from 'phosphor-react';
 import { isPast, format } from 'date-fns';
+import { Link } from 'react-router-dom';
 
 interface LessonCardProps {
 	title: string;
@@ -16,10 +17,13 @@ export const LessonCard = (props: LessonCardProps) => {
 	);
 
 	return (
-		<a href="#" className="flex flex-col gap-2">
+		<Link
+			to={`/event/lesson/${props.slug}`}
+			className="flex flex-col gap-2 group"
+		>
 			<span className="text-base text-gray-300">{availableAtFormatted}</span>
 
-			<div className="flex flex-col border border-gray-500 rounded p-4 gap-4">
+			<div className="flex flex-col border border-gray-500 rounded p-4 gap-4 group-hover:border-green-500">
 				<header className="flex items-center justify-between">
 					{isLessonAvailable ? (
 						<span className="flex items-center text-sm text-blue-500 font-medium gap-2">
@@ -39,6 +43,6 @@ export const LessonCard = (props: LessonCardProps) => {
 
 				<strong className="text-gray-200 block">{props.title}</strong>
 			</div>
-		</a>
+		</Link>
 	);
 };
