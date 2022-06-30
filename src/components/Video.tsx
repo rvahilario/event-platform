@@ -1,3 +1,5 @@
+import { DefaultControls, DefaultUi, Player, Youtube } from '@vime/react';
+import '@vime/core/themes/default.css';
 import {
 	CaretRight,
 	DiscordLogo,
@@ -10,7 +12,12 @@ export const Video = () => {
 		<div className="flex-1">
 			<div className="flex justify-center bg-black">
 				<div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
-					<div className="flex h-full justify-center items-center">Video</div>
+					<Player>
+						<Youtube videoId="hMUF8aHuWBY" />
+						<DefaultUi noControls>
+							<DefaultControls hideOnMouseLeave activeDuration={2000} />
+						</DefaultUi>
+					</Player>
 				</div>
 			</div>
 
