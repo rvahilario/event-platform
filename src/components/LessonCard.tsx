@@ -1,4 +1,5 @@
 import { CheckCircle, Lock } from 'phosphor-react';
+import { isPast, format } from 'date-fns';
 
 interface LessonCardProps {
 	title: string;
@@ -8,11 +9,15 @@ interface LessonCardProps {
 }
 
 export const LessonCard = (props: LessonCardProps) => {
-	const isLessonAvailable = false;
+	const isLessonAvailable = isPast(props.availableAt);
+	const availableAtFormatted = format(
+		props.availableAt,
+		"EEEE' • 'd' of 'MMMM' • 'K'h'mm"
+	);
 
 	return (
 		<a href="#" className="flex flex-col gap-2">
-			<span className="text-base text-gray-300">{props.title}</span>
+			<span className="text-base text-gray-300">{availableAtFormatted}</span>
 
 			<div className="flex flex-col border border-gray-500 rounded p-4 gap-4">
 				<header className="flex items-center justify-between">
@@ -32,7 +37,7 @@ export const LessonCard = (props: LessonCardProps) => {
 					</span>
 				</header>
 
-				<strong className="text-gray-200 block">Class title</strong>
+				<strong className="text-gray-200 block">{props.title}</strong>
 			</div>
 		</a>
 	);
